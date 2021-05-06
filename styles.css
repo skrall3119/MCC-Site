@@ -1,0 +1,96 @@
+*{
+    font-size: 24px;
+    font-family: Alef;
+}
+
+h1{
+    font-size: 50px;
+    color: white;
+}
+
+html, body{
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(20deg, purple, gold);
+}
+
+.grid{
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "header header header"
+    "leftsidebar leftsidebar leftsidebar"
+    "rightsidebar rightsidebar rightsidebar"
+    "content content content"
+    "footer footer footer";
+}
+
+img{
+    width: 85%;
+}
+.title{
+    grid-area: title;
+    padding: 10px;
+    text-align: center;
+    height: 25%;
+    font-size: 30;
+    background-color: transparent;
+    
+}
+.header{
+    background-color: transparent;
+    grid-area: header;
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+}
+nav li a {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+    background: transparent;
+    color: White;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 3;
+}
+.leftsidebar{
+    text-align: left;
+    grid-area: leftsidebar;
+}
+.rightsidebar{
+    text-align: right;
+    grid-area: rightsidebar;
+}
+.content{
+    grid-area: content;
+}
+.meetings{
+    margin 15px;
+    background: white;
+}
+.content li{
+    margin 15px;
+}
+.footer{
+    text-align: center;
+    grid-area: footer;
+    height: 4vh;
+}
+
+@media screen and (min-width: 736px){
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    ". title title title ."
+    ". header header header ."
+    ". leftsidebar content rightsidebar ."
+    ". leftsidebar content rightsidebar ."
+    ". footer footer footer .";
+}
+}
